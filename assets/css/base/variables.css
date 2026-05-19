@@ -1,0 +1,12 @@
+:root {
+  --color-primary: #0f172a;
+  --color-secondary: #2563eb;
+  --color-dark: #020617;
+  --color-light: #ffffff;
+  --color-text: #cbd5e1;
+  --color-border: rgba(255,255,255,0.08);
+   --container-width: 1240px;
+  --transition: 0.35s ease;
+ --font-heading: "Saira", sans-serif;
+  --font-body: "Saira", sans-serif;
+}
