@@ -5,8 +5,8 @@
   --color-light: #ffffff;
   --color-text: #cbd5e1;
   --color-border: rgba(255,255,255,0.08);
-   --container-width: 1240px;
+  --container-width: 1240px;
   --transition: 0.35s ease;
- --font-heading: "Saira", sans-serif;
+  --font-heading: "Saira", sans-serif;
   --font-body: "Saira", sans-serif;
 }
