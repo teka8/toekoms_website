@@ -1,0 +1,4 @@
+@font-face{
+    fon-family: "Inter;
+    src: url("../../fonts/Inter-Regular.ttf");
+    }

@@ -1,0 +1,1 @@
+console.log('Footer component loaded');
