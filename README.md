@@ -101,40 +101,6 @@ project-root/
 ```
 
 ---
-
-# Team Structure
-
-## Teka — Technical Lead
-
-Responsibilities:
-
-- Project coordination
-- Architecture decisions
-- Technical planning
-- Code review
-- Deployment oversight
-- Client communication
-
-## Melkie — Frontend / UI Development
-
-Responsibilities:
-
-- Homepage implementation
-- UI components
-- Responsive layouts
-- Typography and animations
-
-## Samuel — Frontend Support / Integrations
-
-Responsibilities:
-
-- Supporting pages
-- Form integrations
-- Optimization and testing
-- QA support
-
----
-
 # Workflow
 
 ## Git Workflow
