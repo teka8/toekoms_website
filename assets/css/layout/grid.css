@@ -1,5 +1,5 @@
 .container {
-  width: 90%;
+  width: min(92%, var(--container-width));
   max-width: var(--container-width);
-  margin:auto;
+  margin: 0 auto;
 }
