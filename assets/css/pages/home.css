@@ -5,7 +5,7 @@
   align-items: center;
   padding: 78px 0;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-brand-blue) 0%, #0873dd 100%);
+  background: var(--color-brand-blue);
   color: white;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .services-preview {
-  background: #0873dd;
+  background: var(--color-brand-blue);
 }
 
 .split-section {
@@ -177,7 +177,7 @@
 }
 
 .statement-section {
-  background: #0076ef;
+  background: var(--color-brand-blue);
 }
 
 .statement-grid {
