@@ -23,7 +23,7 @@
 }
 
 .button-primary:hover {
-  background: #006bd9;
+  background: var(--color-secondary);
 }
 
 .button-secondary {
@@ -33,5 +33,5 @@
 
 .button-secondary:hover {
   border-color: rgba(255, 255, 255, 0.48);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
 }

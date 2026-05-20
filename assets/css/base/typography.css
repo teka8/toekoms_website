@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: #ffffff;
+  background: var(--color-surface);
   color: var(--color-ink);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -35,7 +35,7 @@ h6 {
 }
 
 p {
-  color: var(--color-muted);
+  color: var(--color-text);
   line-height: 1.7;
 }
 
