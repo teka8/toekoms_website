@@ -1,0 +1,134 @@
+.section {
+  padding: 72px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.section-header {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.section-kicker {
+  display: inline-block;
+}
+
+.section-title {
+  margin-bottom: 12px;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  line-height: 1.1;
+  color: white;
+}
+
+.section-description {
+  color: var(--color-text);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(4, 18, 38, 0.16);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 1.12rem;
+  color: white;
+}
+
+.card p {
+  color: var(--color-text);
+}
+
+.leadership-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.leader {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(4, 18, 38, 0.16);
+}
+
+.leader-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(255,255,255,0.12);
+}
+
+.leader h4 {
+  margin-bottom: 4px;
+  color: white;
+}
+
+.leader span {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.value-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.value-item .dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.cta-strip {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(4, 18, 38, 0.2);
+}
+
+.cta-strip a {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 980px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .leadership-list { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 680px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .leadership-list { grid-template-columns: 1fr; }
+  .values-list { grid-template-columns: 1fr; }
+}
