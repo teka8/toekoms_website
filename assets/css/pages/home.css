@@ -35,13 +35,13 @@
   text-transform: uppercase;
 }
 
+
 .hero-title {
-  margin-bottom: 28px;
-
+  max-width: 680px;
+  margin-bottom: 24px;
   color: white;
-
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
-  line-height: 0.98;
+  font-size: clamp(2.35rem, 4.6vw, 4.45rem);
+  line-height: 1.02;
 }
 
 .hero-description {
