@@ -390,6 +390,17 @@
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important; /* Forces a single column */
+    width: 100%;
+  }
+
+  .service-card {
+    width: 100%; /* Ensures cards stretch full width vertically */
+    box-sizing: border-box;
+  }
+}
 
 @media (max-width: 1100px) {
   .services-grid,
@@ -405,7 +416,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 120px 0 80px;
+    padding: 50px 0 80px;
   }
 
   .services-grid,
