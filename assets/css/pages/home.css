@@ -1,13 +1,13 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 76px);
   display: flex;
   align-items: center;
+  padding: 78px 0;
   overflow: hidden;
   background: var(--color-brand-blue);
   color: white;
-  padding: 50px 0 50px;
 }
 
 .hero-container {
