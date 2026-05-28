@@ -23,8 +23,8 @@ function initializeNavbar() {
 
 async function initializeSite() {
   await Promise.all([
-    loadComponent("navbar-container", "components/navbar.html"),
-    loadComponent("footer-container", "components/footer.html"),
+    loadComponent("navbar-container", "/components/navbar.html"),
+    loadComponent("footer-container", "/components/footer.html"),
   ]);
 
   initializeNavbar();
