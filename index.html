@@ -40,8 +40,20 @@
     <header id="navbar-container"></header>
     <main>
       <section class="hero">
+        <div class="visual-field visual-field-hero" aria-hidden="true">
+          <span class="geo geo-ring"></span>
+          <span class="geo geo-ring geo-ring-small"></span>
+          <span class="geo geo-diamond"></span>
+          <span class="geo geo-corner"></span>
+          <span class="geo geo-node geo-node-one"></span>
+          <span class="geo geo-node geo-node-two"></span>
+          <span class="geo geo-node geo-node-three"></span>
+          <span class="geo geo-line geo-line-one"></span>
+          <span class="geo geo-line geo-line-two"></span>
+          <span class="scan-beam"></span>
+        </div>
         <div class="container hero-container">
-          <div class="hero-content">
+          <div class="hero-content" data-reveal="fade-up">
             <p class="hero-label">Remote security operations / compliance / monitoring</p>
             <h1 class="hero-title">Cybersecurity operations for teams that cannot afford blind spots.</h1>
             <p class="hero-description">
@@ -53,13 +65,20 @@
             </div>
           </div>
 
-          <aside class="operations-panel" aria-label="Security operations snapshot">
+          <aside class="operations-panel" aria-label="Security operations snapshot" data-reveal="fade-left">
+            <div class="panel-grid" aria-hidden="true"></div>
             <div class="panel-header">
               <span class="status-dot"></span>
               <span>Monitoring now</span>
             </div>
             <p class="panel-time">24/7</p>
             <h2>Security visibility, response readiness, and compliance support.</h2>
+            <div class="signal-bars" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <div class="panel-divider"></div>
             <div class="panel-row">
               <span>Active focus</span>
@@ -73,8 +92,13 @@
         </div>
       </section>
       <section class="section services-section">
+        <div class="visual-field visual-field-services" aria-hidden="true">
+          <span class="geo geo-dots"></span>
+          <span class="geo geo-outline"></span>
+          <span class="geo geo-slab"></span>
+        </div>
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading" data-reveal="fade-up">
             <p class="section-kicker">CORE SERVICES</p>
 
             <h2>What we deliver</h2>
@@ -85,7 +109,8 @@
           </div>
 
           <div class="services-grid">
-            <article class="service-card">
+            <article class="service-card" data-reveal="fade-up">
+              <span class="card-orbit" aria-hidden="true"></span>
               <div class="service-number">01</div>
               <h3>Security Operations</h3>
               <p>
@@ -94,7 +119,8 @@
               </p>
               <a href="services.html">Learn more</a>
             </article>
-            <article class="service-card">
+            <article class="service-card" data-reveal="fade-up">
+              <span class="card-orbit" aria-hidden="true"></span>
               <div class="service-number">02</div>
               <h3>Detection Engineering</h3>
               <p>
@@ -104,7 +130,8 @@
 
               <a href="services.html">Learn more</a>
             </article>
-            <article class="service-card">
+            <article class="service-card" data-reveal="fade-up">
+              <span class="card-orbit" aria-hidden="true"></span>
               <div class="service-number">03</div>
               <h3>Incident Readiness</h3>
               <p>
@@ -117,18 +144,19 @@
         </div>
       </section>
       <section class="section statement-section">
+        <div class="section-divider-shape" aria-hidden="true"></div>
         <div class="container statement-grid">
-          <div>
+          <div data-reveal="fade-right">
             <p class="section-kicker">WHY TOEKOM</p>
             <h2>
               Built for organizations that need operational clarity and secure
               execution.
             </h2>
           </div>
-          <div>
+          <div data-reveal="fade-left">
             <p>
               We focus on practical cybersecurity operations that teams can
-              maintain consistently. The goal is not unnecessary complexity — it
+              maintain consistently. The goal is not unnecessary complexity - it
               is stronger visibility, faster response readiness, and sustainable
               operational discipline.
             </p>
@@ -137,13 +165,17 @@
         </div>
       </section>
       <section class="section process-section">
+        <div class="visual-field visual-field-process" aria-hidden="true">
+          <span class="geo geo-track"></span>
+          <span class="geo geo-pulse-dot"></span>
+        </div>
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading" data-reveal="fade-up">
             <p class="section-kicker">HOW WE WORK</p>
             <h2>A structured operational process.</h2>
           </div>
           <div class="process-grid">
-            <div class="process-card">
+            <div class="process-card" data-reveal="fade-up">
               <span>01</span>
               <h3>Security Intake</h3>
               <p>
@@ -151,7 +183,7 @@
                 operational priorities.
               </p>
             </div>
-            <div class="process-card">
+            <div class="process-card" data-reveal="fade-up">
               <span>02</span>
               <h3>Operational Review</h3>
               <p>
@@ -159,7 +191,7 @@
                 readiness posture.
               </p>
             </div>
-            <div class="process-card">
+            <div class="process-card" data-reveal="fade-up">
               <span>03</span>
               <h3>Security Alignment</h3>
               <p>
@@ -167,7 +199,7 @@
                 compliance support.
               </p>
             </div>
-            <div class="process-card">
+            <div class="process-card" data-reveal="fade-up">
               <span>04</span>
               <h3>Continuous Support</h3>
               <p>
@@ -179,7 +211,10 @@
         </div>
       </section>
       <section class="section cta-section">
-        <div class="container cta-container">
+        <div class="container cta-container" data-reveal="fade-up">
+          <span class="cta-glow" aria-hidden="true"></span>
+          <span class="cta-corner cta-corner-one" aria-hidden="true"></span>
+          <span class="cta-corner cta-corner-two" aria-hidden="true"></span>
           <div>
             <p class="section-kicker">START NOW</p>
             <h2>Strengthen your operational security foundation.</h2>
