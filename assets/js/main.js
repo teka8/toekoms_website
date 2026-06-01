@@ -1,3 +1,8 @@
+// Remove trailing slash from URL (keeps root "/" intact)
+if (window.location.pathname.length > 1 && window.location.pathname.endsWith('/')) {
+  history.replaceState(null, '', window.location.pathname.slice(0, -1) + window.location.search + window.location.hash);
+}
+
 async function loadComponent(id, file) {
   const element = document.getElementById(id);
 
@@ -23,8 +28,8 @@ function initializeNavbar() {
 
 async function initializeSite() {
   await Promise.all([
-    loadComponent("navbar-container", "components/navbar.html"),
-    loadComponent("footer-container", "components/footer.html"),
+    loadComponent("navbar-container", "/components/navbar.html"),
+    loadComponent("footer-container", "/components/footer.html"),
   ]);
 
   initializeNavbar();
