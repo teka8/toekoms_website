@@ -26,6 +26,26 @@ function initializeNavbar() {
   });
 }
 
+function initializeScrollAnimations() {
+  const animatedElements = document.querySelectorAll('[data-animate], [data-animate-stagger], .section-header, .section-heading');
+  
+  if (!animatedElements.length) return;
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+  
+  animatedElements.forEach(el => observer.observe(el));
+}
+
 async function initializeSite() {
   await Promise.all([
     loadComponent("navbar-container", "/components/navbar.html"),
@@ -33,6 +53,7 @@ async function initializeSite() {
   ]);
 
   initializeNavbar();
+  initializeScrollAnimations();
 }
 
 initializeSite();
