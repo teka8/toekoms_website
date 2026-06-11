@@ -88,8 +88,19 @@
   z-index: 1001;
 }
 
-.nav-dropdown:hover .dropdown-menu {
+/* Disable hover-open on desktop; click toggles .open */
+.nav-dropdown:hover > .dropdown-menu {
+  display: none;
+}
+
+/* Also show dropdown when explicitly opened via click (desktop) */
+.nav-dropdown.open > .dropdown-menu {
   display: block;
+}
+
+/* Rotate arrow when open (desktop) */
+.nav-dropdown.open > a .dropdown-arrow {
+  transform: rotate(180deg);
 }
 
 .dropdown-menu li {
@@ -160,20 +171,21 @@
   }
 
   .nav-links {
-    position: absolute;
-    top: 76px;
-    left: 50%;
-    width: 50%;
+    position: fixed;
+    top: var(--navbar-height, 76px);
+    left: 0;
+    width: 100%;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: stretch;
     gap: 0;
-    padding: 10px 4%;
-    /* background: var(--color-dark); */
+    padding: 12px 20px;
     background: var(--color-secondary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-6px);
+    transform: translateY(-8px);
     transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
   }
 
@@ -189,32 +201,122 @@
 
   .nav-links a {
     display: block;
-    padding: 14px 0;
+    padding: 16px 0;
+    line-height: 1.2;
   }
 
+  /* Show chevrons on mobile for items with children */
   .nav-dropdown .dropdown-arrow {
-    display: none;
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform var(--transition);
   }
 
+  /* Submenus collapsed by default on mobile; expand via .open */
   .dropdown-menu {
     position: static;
     transform: none;
     background: transparent;
     border: none;
     padding: 0 0 0 16px;
+    display: none;
+  }
+
+  .nav-dropdown.open > .dropdown-menu {
     display: block;
   }
 
-  .nav-dropdown:hover .dropdown-menu {
-    display: block;
+  .nav-dropdown.open > a .dropdown-arrow {
+    transform: rotate(180deg);
   }
+
+  /* Disable hover-to-open on mobile; open only via click (JS toggles .open) */
+  /* .nav-dropdown:hover > .dropdown-menu { display: none; } */
 
   .dropdown-menu a {
-    padding: 8px 0;
-    font-size: 0.85rem;
+    padding: 10px 0;
+    font-size: 0.95rem;
   }
 
   .nav-cta {
     display: none;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  /* Nested dropdowns: indent; each level opens independently */
+  .nav-links .dropdown-menu .dropdown-menu {
+    position: static;
+    padding-left: 16px;
+  }
+
+  /* Parent row layout and visuals for better affordance */
+  .nav-dropdown > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-right: 4px;
+  }
+  .nav-dropdown > a .dropdown-arrow {
+    margin-left: 8px;
+  }
+  .nav-dropdown.open > a {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .nav-links a:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.24);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  .dropdown-menu {
+    margin-top: 6px;
+  }
+
+  /* Reset list spacing for clean stack */
+  .nav-links,
+  .nav-links ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  /* Subtle separators between top-level items for readability */
+  .nav-links > li + li {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Slightly tighter spacing and smaller text for deeper levels */
+  .nav-links .dropdown-menu a {
+    padding: 10px 0;
+    font-size: 0.93rem;
+  }
+  .nav-links .dropdown-menu .dropdown-menu a {
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  /* Active link highlight */
+  .nav-links a[aria-current="page"],
+  .nav-links a.active {
+    color: var(--color-accent, #6ee7ff);
+    text-decoration: none;
+  }
+
+  /* Backdrop overlay when nav is open */
+  body.nav-open::before {
+    content: "";
+    position: fixed;
+    inset: var(--navbar-height, 76px) 0 0 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+    z-index: 900;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity var(--transition);
   }
 }
