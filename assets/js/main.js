@@ -17,12 +17,28 @@ async function loadComponent(id, file) {
 function initializeNavbar() {
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
+  const navbar = document.querySelector(".navbar");
 
   if (!menuToggle || !navLinks) return;
 
   menuToggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("active");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
 }
 
