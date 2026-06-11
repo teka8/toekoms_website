@@ -6,17 +6,37 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://toekom.com/services.html</loc>
+    <loc>https://toekom.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toekom.com/about.html</loc>
+    <loc>https://toekom.com/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toekom.com/industries</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toekom.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toekom.com/news</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://toekom.com/shop</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toekom.com/contact.html</loc>
+    <loc>https://toekom.com/certification</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
