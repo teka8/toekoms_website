@@ -37,6 +37,7 @@
     <header id="navbar-container"></header>
     <main>
       <section class="hero page-hero">
+        <div class="visual-field visual-field-hero"></div>
         <div class="container hero-container">
           <div class="hero-content">
             <p class="hero-label">Certification & Training</p>
@@ -45,11 +46,26 @@
               Structured programs designed for IT and security professionals seeking industry-recognized certifications
               and practical, hands-on skills.
             </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary button-animated" href="#tracks">Explore Tracks</a>
+              <a class="button button-secondary" href="/contact">Contact Training Team</a>
+            </div>
           </div>
+          <aside class="hero-visual">
+            <div class="icon-cap">
+              <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="cap-top" points="60,20 10,55 60,78 110,55" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+                <polygon class="cap-skirt" points="20,55 20,70 60,85 100,70 100,55 60,78" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" fill="none"/>
+                <circle class="cap-dot" cx="60" cy="20" r="3" fill="rgba(255,255,255,0.9)"/>
+                <path class="cap-tassel" d="M60 20 Q 72 18 75 30" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+                <line class="cap-line" x1="60" y1="85" x2="60" y2="110" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+              </svg>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="tracks">
         <div class="container">
           <header class="section-header">
             <p class="section-kicker">Tracks</p>

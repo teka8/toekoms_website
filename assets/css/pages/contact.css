@@ -241,6 +241,53 @@ textarea {
   color: #ffffff;
 }
 
+/* Hero Visual - Envelope Icon */
+.icon-envelope {
+  position: relative;
+  width: clamp(220px, 22vw, 320px);
+  height: auto;
+  aspect-ratio: 120 / 140;
+}
+
+.icon-envelope svg {
+  width: 100%;
+  height: 100%;
+}
+
+.env-body {
+  animation: shield-breathe 5s ease-in-out infinite;
+}
+
+.env-dot {
+  animation: dot-glow 3s ease-in-out infinite;
+}
+
+.env-line {
+  animation: circuit-fade 3s ease-in-out infinite;
+}
+
+.env-flap {
+  animation: envelope-flap 4s ease-in-out infinite;
+  transform-origin: 60px 50px;
+}
+
+@keyframes envelope-flap {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.08); }
+}
+
+@media (max-width: 1100px) {
+  .icon-envelope { width: 180px; }
+}
+
+@media (max-width: 768px) {
+  .icon-envelope { width: 140px; }
+}
+
+@media (max-width: 480px) {
+  .icon-envelope { width: 120px; }
+}
+
 @media (max-width: 992px) {
   .contact-grid {
     grid-template-columns: 1fr;
