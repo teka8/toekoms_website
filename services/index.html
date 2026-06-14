@@ -37,6 +37,7 @@
     <header id="navbar-container"></header>
     <main>
       <section class="hero page-hero">
+        <div class="visual-field visual-field-hero"></div>
         <div class="container hero-container">
           <div class="hero-content">
             <p class="hero-label">Services</p>
@@ -45,7 +46,22 @@
               Cybersecurity, digital transformation, and healthcare IT solutions that are practical,
               provable, and designed for the way modern organizations operate.
             </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary button-animated" href="/contact">Schedule a Consultation</a>
+              <a class="button button-secondary" href="#packages">View Packages</a>
+            </div>
           </div>
+          <aside class="hero-visual">
+            <div class="icon-hexagon">
+              <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="hex-outline" points="60,15 110,42 110,98 60,125 10,98 10,42" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+                <polygon class="hex-inner" points="60,28 98,48 98,92 60,112 22,92 22,48" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" fill="none"/>
+                <circle class="hex-dot" cx="60" cy="70" r="3" fill="rgba(255,255,255,0.9)"/>
+                <line class="hex-line-t" x1="60" y1="15" x2="60" y2="42" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <line class="hex-line-b" x1="60" y1="98" x2="60" y2="125" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              </svg>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -133,7 +149,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="packages">
         <div class="container">
           <header class="section-header">
             <p class="section-kicker">Packages</p>
