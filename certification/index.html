@@ -54,11 +54,47 @@
           <aside class="hero-visual">
             <div class="icon-cap">
               <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <polygon class="cap-top" points="60,20 10,55 60,78 110,55" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
-                <polygon class="cap-skirt" points="20,55 20,70 60,85 100,70 100,55 60,78" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" fill="none"/>
-                <circle class="cap-dot" cx="60" cy="20" r="3" fill="rgba(255,255,255,0.9)"/>
-                <path class="cap-tassel" d="M60 20 Q 72 18 75 30" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
-                <line class="cap-line" x1="60" y1="85" x2="60" y2="110" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <!-- Drop Shadow / Glow Base (Invisible but for structure) -->
+                <defs>
+                  <filter id="cap-glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                  <linearGradient id="cap-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0.12)" />
+                    <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Tech Connection Line (Vertical) -->
+                <line class="cap-line" x1="60" y1="95" x2="60" y2="125" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                <circle class="cap-line-node" cx="60" cy="125" r="2" fill="rgba(255,255,255,0.3)" />
+
+                <!-- Cap Base/Skirt with Depth -->
+                <path class="cap-skirt" d="M38 62 v15 c0 0, 22 12, 44 0 v-15" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="url(#cap-gradient)"/>
+                <path d="M38 72 c0 0, 22 10, 44 0" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none" />
+
+                <!-- Mortarboard Thickness/Edge -->
+                <path class="cap-edge" d="M5 45 L60 65 L115 45 L115 49 L60 69 L5 49 Z" fill="rgba(255,255,255,0.08)" />
+
+                <!-- Mortarboard Top -->
+                <path class="cap-top" d="M60 25 L115 45 L60 65 L5 45 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" fill="rgba(255,255,255,0.05)" />
+                
+                <!-- Internal Tech Details (Circuitry on top) -->
+                <path class="cap-circuit" d="M40 38 L60 45 L80 38" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" fill="none" />
+                <circle cx="40" cy="38" r="1" fill="rgba(255,255,255,0.2)" />
+                <circle cx="80" cy="38" r="1" fill="rgba(255,255,255,0.2)" />
+
+                <!-- Tassel -->
+                <g class="cap-tassel-group">
+                  <path class="cap-tassel" d="M60 25 Q 98 25 98 68" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                  <!-- Tassel Brush/End -->
+                  <path class="cap-tassel-brush" d="M95 68 L101 68 M96 72 L100 72 M97 76 L99 76" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" />
+                  <circle cx="98" cy="68" r="2.5" fill="rgba(255,255,255,0.6)" />
+                </g>
+
+                <!-- Center Button -->
+                <circle class="cap-dot" cx="60" cy="25" r="3.5" fill="white" filter="url(#cap-glow)"/>
               </svg>
             </div>
           </aside>

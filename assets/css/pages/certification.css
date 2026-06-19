@@ -88,33 +88,57 @@
 
 .cap-top {
   animation: cap-float 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.05));
+}
+
+.cap-edge {
+  animation: cap-float 4s ease-in-out infinite;
+}
+
+.cap-circuit {
+  animation: circuit-fade 4s ease-in-out infinite;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: circuit-draw 6s linear infinite;
 }
 
 .cap-skirt {
-  animation: shield-fill-pulse 5s ease-in-out infinite;
+  animation: cap-float 4s ease-in-out infinite;
+  animation-delay: 0.2s;
 }
 
 .cap-dot {
   animation: dot-glow 3s ease-in-out infinite;
 }
 
-.cap-tassel {
-  animation: cap-sway 3s ease-in-out infinite;
-  transform-origin: 60px 20px;
+.cap-tassel-group {
+  animation: cap-sway 4s ease-in-out infinite;
+  transform-origin: 60px 25px;
 }
 
 .cap-line {
   animation: circuit-fade 3s ease-in-out infinite;
 }
 
+.cap-line-node {
+  animation: dot-glow 3s ease-in-out infinite;
+}
+
 @keyframes cap-float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes cap-sway {
-  0%, 100% { transform: rotate(-6deg); }
-  50% { transform: rotate(6deg); }
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes circuit-draw {
+  0% { stroke-dashoffset: 40; opacity: 0; }
+  20% { opacity: 1; }
+  80% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
 }
 
 @media (max-width: 1100px) {
