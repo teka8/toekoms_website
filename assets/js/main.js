@@ -159,6 +159,53 @@ function initializeScrollAnimations() {
   animatedElements.forEach(el => observer.observe(el));
 }
 
+function initializeResumeForm() {
+  const fileUploadArea = document.getElementById('fileUploadArea');
+  const fileInput = document.getElementById('resumeFile');
+  const fileName = document.getElementById('fileName');
+
+  if (!fileUploadArea || !fileInput) return;
+
+  fileInput.addEventListener('change', function() {
+    if (this.files && this.files.length > 0) {
+      var file = this.files[0];
+      if (file.size > 5 * 1024 * 1024) {
+        alert('File size must be under 5MB.');
+        this.value = '';
+        fileName.textContent = '';
+        return;
+      }
+      fileName.textContent = file.name;
+    }
+  });
+
+  fileUploadArea.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    this.classList.add('drag-over');
+  });
+
+  fileUploadArea.addEventListener('dragleave', function(e) {
+    e.preventDefault();
+    this.classList.remove('drag-over');
+  });
+
+  fileUploadArea.addEventListener('drop', function(e) {
+    e.preventDefault();
+    this.classList.remove('drag-over');
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      fileInput.files = e.dataTransfer.files;
+      var file = e.dataTransfer.files[0];
+      if (file.size > 5 * 1024 * 1024) {
+        alert('File size must be under 5MB.');
+        fileInput.value = '';
+        fileName.textContent = '';
+        return;
+      }
+      fileName.textContent = file.name;
+    }
+  });
+}
+
 async function initializeSite() {
   await Promise.all([
     loadComponent("navbar-container", "/components/navbar.html"),
@@ -167,6 +214,7 @@ async function initializeSite() {
 
   initializeNavbar();
   initializeScrollAnimations();
+  initializeResumeForm();
 }
 
 initializeSite();

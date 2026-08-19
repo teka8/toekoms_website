@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact Toekom for cybersecurity consulting, infrastructure protection, and digital security services."
+      content="Contact Toekoms Digital for cybersecurity consulting, infrastructure protection, and digital security services."
     />
-    <link rel="canonical" href="https://toekom.com/contact" />
+    <link rel="canonical" href="https://toekomsdigital.com/contact" />
     <meta name="theme-color" content="#0b1220" />
     <link rel="icon" href="/assets/images/logos/Toekom - Back Logo (2).png" type="image/png" />
-    <meta property="og:site_name" content="Toekom" />
+    <meta property="og:site_name" content="Toekoms Digital" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Contact | Toekom" />
-    <meta property="og:description" content="Contact Toekom for cybersecurity consulting, infrastructure protection, and digital security services." />
-    <meta property="og:url" content="https://toekom.com/contact" />
-    <meta property="og:image" content="https://toekom.com/assets/images/logos/Toekom%20-%20revised%20design%20(2).png" />
+    <meta property="og:title" content="Contact | Toekoms Digital" />
+    <meta property="og:description" content="Contact Toekoms Digital for cybersecurity consulting, infrastructure protection, and digital security services." />
+    <meta property="og:url" content="https://toekomsdigital.com/contact" />
+    <meta property="og:image" content="https://toekomsdigital.com/assets/images/logos/Toekom%20-%20revised%20design%20(2).png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact | Toekom" />
-    <meta name="twitter:description" content="Contact Toekom for cybersecurity consulting, infrastructure protection, and digital security services." />
-    <meta name="twitter:image" content="https://toekom.com/assets/images/logos/Toekom%20-%20revised%20design%20(2).png" />
+    <meta name="twitter:title" content="Contact | Toekoms Digital" />
+    <meta name="twitter:description" content="Contact Toekoms Digital for cybersecurity consulting, infrastructure protection, and digital security services." />
+    <meta name="twitter:image" content="https://toekomsdigital.com/assets/images/logos/Toekom%20-%20revised%20design%20(2).png" />
     <link rel="preload" href="/assets/css/main.css" as="style" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Contact | Toekom",
-        "url": "https://toekom.com/contact",
-        "description": "Contact Toekom for cybersecurity consulting, infrastructure protection, and digital security services."
+        "name": "Contact | Toekoms Digital",
+        "url": "https://toekomsdigital.com/contact",
+        "description": "Contact Toekoms Digital for cybersecurity consulting, infrastructure protection, and digital security services."
       }
     </script>
-    <title>Contact | Toekom</title>
+    <title>Contact | Toekoms Digital</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -42,7 +42,7 @@
         <div class="visual-field visual-field-hero"></div>
         <div class="container hero-container">
           <div class="hero-content">
-            <p class="hero-label">Contact Toekom</p>
+            <p class="hero-label">Contact Toekoms Digital</p>
             <h1 class="hero-title">Secure conversations start with the right cybersecurity partner.</h1>
             <p class="hero-description">
               Whether you need infrastructure protection, cybersecurity
@@ -87,15 +87,7 @@
                 <div class="info-icon">✉</div>
                 <div>
                   <h4>Email</h4>
-                  <p>info@toekom.com</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">☎</div>
-                <div>
-                  <h4>Phone</h4>
-                  <p>+1 804-299-6724</p>
+                  <p>info@toekomsdigital.com</p>
                 </div>
               </div>
 
@@ -103,38 +95,34 @@
                 <div class="info-icon">⌂</div>
                 <div>
                   <h4>Location</h4>
-                  <p>New York, USA</p>
+                  <p>6340 Security Blvd, Suite 100<br/>Baltimore, MD 2121</p>
                 </div>
               </div>
-            </div>
-
-            <div class="contact-card-footer">
-              <h4>Working Hours</h4>
-              <p>Monday - Friday</p>
-              <p>8:30 AM - 5:30 PM</p>
             </div>
           </div>
           <!-- RIGHT -->
           <div class="contact-form-card">
-            <!-- 1. Added the FormSubmit action URL with your email and set method to POST -->
             <form
               class="contact-form"
               action="https://formsubmit.co/21melkie00@gmail.com"
               method="POST"
+              id="contactForm"
             >
-              <!-- Optional: Anti-spam honeypot field (hidden from users) -->
-              <input type="text" name="_honey" style="display: none" />
+              <!-- Honeypot spam protection -->
+              <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
+              <!-- Timestamp for time-based spam protection -->
+              <input type="hidden" name="_timestamp" id="formTimestamp" value="" />
 
-              <!-- Optional: Changes the email subject line you receive -->
               <input
                 type="hidden"
                 name="_subject"
-                value="New Contact Form Submission | Toekom"
+                value="New Contact Form Submission | Toekoms Digital"
               />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
 
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <!-- 2. Added name="name" attribute -->
                 <input
                   type="text"
                   id="name"
@@ -147,7 +135,6 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="email">Email Address</label>
-                  <!-- 2. Added name="email" attribute -->
                   <input
                     type="email"
                     id="email"
@@ -159,19 +146,77 @@
 
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <!-- 2. Added name="phone" attribute -->
-                  <input
-                    type="text"
-                    id="phone"
-                    name="phone"
-                    placeholder="+251..."
-                  />
+                  <div class="phone-input-group">
+                    <select id="countryCode" name="countryCode" class="country-code-select">
+                      <option value="+1">🇺🇸 +1 (US)</option>
+                      <option value="+44">🇬🇧 +44 (UK)</option>
+                      <option value="+91">🇮🇳 +91 (IN)</option>
+                      <option value="+86">🇨🇳 +86 (CN)</option>
+                      <option value="+81">🇯🇵 +81 (JP)</option>
+                      <option value="+49">🇩🇪 +49 (DE)</option>
+                      <option value="+33">🇫🇷 +33 (FR)</option>
+                      <option value="+61">🇦🇺 +61 (AU)</option>
+                      <option value="+55">🇧🇷 +55 (BR)</option>
+                      <option value="+27">🇿🇦 +27 (ZA)</option>
+                      <option value="+234">🇳🇬 +234 (NG)</option>
+                      <option value="+254">🇰🇪 +254 (KE)</option>
+                      <option value="+20">🇪🇬 +20 (EG)</option>
+                      <option value="+971">🇦🇪 +971 (AE)</option>
+                      <option value="+966">🇸🇦 +966 (SA)</option>
+                      <option value="+92">🇵🇰 +92 (PK)</option>
+                      <option value="+93">🇦🇫 +93 (AF)</option>
+                      <option value="+380">🇺🇦 +380 (UA)</option>
+                      <option value="+7">🇷🇺 +7 (RU)</option>
+                      <option value="+82">🇰🇷 +82 (KR)</option>
+                      <option value="+34">🇪🇸 +34 (ES)</option>
+                      <option value="+39">🇮🇹 +39 (IT)</option>
+                      <option value="+31">🇳🇱 +31 (NL)</option>
+                      <option value="+46">🇸🇪 +46 (SE)</option>
+                      <option value="+47">🇳🇴 +47 (NO)</option>
+                      <option value="+45">🇩🇰 +45 (DK)</option>
+                      <option value="+358">🇫🇮 +358 (FI)</option>
+                      <option value="+48">🇵🇱 +48 (PL)</option>
+                      <option value="+420">🇨🇿 +420 (CZ)</option>
+                      <option value="+43">🇦🇹 +43 (AT)</option>
+                      <option value="+41">🇨🇭 +41 (CH)</option>
+                      <option value="+351">🇵🇹 +351 (PT)</option>
+                      <option value="+90">🇹🇷 +90 (TR)</option>
+                      <option value="+62">🇮🇩 +62 (ID)</option>
+                      <option value="+60">🇲🇾 +60 (MY)</option>
+                      <option value="+63">🇵🇭 +63 (PH)</option>
+                      <option value="+66">🇹🇭 +66 (TH)</option>
+                      <option value="+84">🇻🇳 +84 (VN)</option>
+                      <option value="+212">🇲🇦 +212 (MA)</option>
+                      <option value="+216">🇹🇳 +216 (TN)</option>
+                      <option value="+94">🇱🇰 +94 (LK)</option>
+                      <option value="+880">🇧🇩 +880 (BD)</option>
+                      <option value="+977">🇳🇵 +977 (NP)</option>
+                      <option value="+95">🇲🇲 +95 (MM)</option>
+                      <option value="+673">🇧🇳 +673 (BN)</option>
+                      <option value="+668">🇹🇱 +668 (TL)</option>
+                      <option value="+856">🇱🇦 +856 (LA)</option>
+                      <option value="+855">🇰🇭 +855 (KH)</option>
+                      <option value="+976">🇲🇳 +976 (MN)</option>
+                      <option value="+998">🇺🇿 +998 (UZ)</option>
+                      <option value="+992">🇹🇯 +992 (TJ)</option>
+                      <option value="+996">🇰🇬 +996 (KG)</option>
+                      <option value="+76">🇹🇲 +76 (TM)</option>
+                      <option value="+370">🇱🇹 +370 (LT)</option>
+                      <option value="+371">🇱🇻 +371 (LV)</option>
+                      <option value="+372">🇪🇪 +372 (EE)</option>
+                    </select>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="(555) 123-4567"
+                    />
+                  </div>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="company">Company / Organization</label>
-                <!-- 2. Added name="company" attribute -->
                 <input
                   type="text"
                   id="company"
@@ -181,25 +226,7 @@
               </div>
 
               <div class="form-group">
-                <label for="service">Service Needed</label>
-                <!-- 2. Added name="service" attribute -->
-                <select id="service" name="service">
-                  <option value="">Select a service</option>
-                  <option value="Cybersecurity Consulting">
-                    Cybersecurity Consulting
-                  </option>
-                  <option value="Cloud Security">Cloud Security</option>
-                  <option value="Risk Assessment">Risk Assessment</option>
-                  <option value="Infrastructure Protection">
-                    Infrastructure Protection
-                  </option>
-                  <option value="Security Audit">Security Audit</option>
-                </select>
-              </div>
-
-              <div class="form-group">
                 <label for="message">Project Details</label>
-                <!-- 2. Added name="message" attribute -->
                 <textarea
                   id="message"
                   name="message"
@@ -228,7 +255,7 @@
             </p>
           </div>
 
-          <a href="/services" class="secondary-btn"> Explore Services </a>
+          <a href="/about#capabilities" class="secondary-btn"> Explore Capabilities </a>
         </div>
       </section>
     </main>
