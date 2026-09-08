@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /services/
+Disallow: /certification/
 
 Sitemap: https://toekomsdigital.com/sitemap.xml
