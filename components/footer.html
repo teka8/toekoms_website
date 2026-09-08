@@ -2,21 +2,27 @@
   <div class="container footer-container">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="footer-logo">
-          <img style="width: 84px;height: 70px;"
+        <a href="/" class="footer-logo" aria-label="Toekoms Digital Home">
+          <img style="width: 84px; height: 70px"
             src="/assets/images/logos/footer-logo.jfif"
             alt="Toekoms Digital Logo"
+            class="footer-logo-img"
           />
-          <span class="logo-text">TOEKOMS DIGITAL</span>
-        </div>
+          <span class="logo-text" style="font-weight: 800; letter-spacing: 0.12em;">TOEKOMS DIGITAL</span>
+        </a>
+        <p class="footer-description" style="margin-top: 14px; font-size: 0.9rem; line-height: 1.6; max-width: 320px; color: rgba(255, 255, 255, 0.8);">
+          Practical cybersecurity, modern digital transformation, and resilient healthcare IT solutions delivered with operational clarity.
+        </p>
       </div>
 
       <div class="footer-links-wrapper">
         <div class="footer-links">
-          <h4>Site</h4>
+          <h4>Navigation</h4>
           <ul>
-            <li><a href="/about">About</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about#capabilities">Capabilities</a></li>
             <li><a href="/industries">Industries</a></li>
+            <li><a href="/about#team">Careers</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
@@ -25,7 +31,7 @@
           <h4>Industries</h4>
           <ul>
             <li><a href="/industries?industry=healthcare">Healthcare</a></li>
-            <li><a href="/industries?industry=financial">Financial</a></li>
+            <li><a href="/industries?industry=financial">Financial Services</a></li>
             <li><a href="/industries?industry=government">Government</a></li>
             <li><a href="/industries?industry=utilities">Utilities</a></li>
             <li><a href="/industries?industry=transportation">Transportation</a></li>
@@ -35,9 +41,9 @@
         </div>
 
         <div class="footer-links">
-          <h4>Contact</h4>
+          <h4>Contact & Location</h4>
           <ul>
-            <li>info@toekomsdigital.com</li>
+            <li><a href="mailto:info@toekomsdigital.com">info@toekomsdigital.com</a></li>
             <li>6340 Security Blvd, Suite 100</li>
             <li>Baltimore, MD 2121</li>
           </ul>
@@ -46,7 +52,11 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Toekoms Digital. All rights reserved.</p>
+      <p>&copy; 2026 Toekoms Digital LLC. All rights reserved.</p>
+      <div class="footer-legal-links" style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <a href="/contact" style="color: rgba(255, 255, 255, 0.75);">Privacy &amp; Data Policy</a>
+        <a href="#" id="cookieSettingsBtn" style="color: #2dd4bf; text-decoration: none;">Cookie Preferences</a>
+      </div>
     </div>
   </div>
 </footer>

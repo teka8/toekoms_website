@@ -33,6 +33,33 @@
   width: 84px;
   height: 34px;
   object-fit: contain;
+  /* Blend the white logo with the dark navy/teal background */
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))
+          drop-shadow(0 0 22px rgba(45, 212, 191, 0.18));
+  transition: filter 0.3s ease;
+}
+
+.footer-logo-image:hover {
+  filter: drop-shadow(0 0 14px rgba(45, 212, 191, 0.65))
+          drop-shadow(0 0 32px rgba(45, 212, 191, 0.3));
+}
+
+/* Cookie preferences trigger link in footer */
+.footer-cookie-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color var(--transition);
+}
+
+.footer-cookie-link:hover {
+  color: white;
 }
 
 .footer-description {

@@ -1,8 +1,8 @@
 <nav class="navbar">
   <div class="container navbar-container">
-    <a href="/">
-      <img style="width: 170px;height: 75px"
-        src="/assets/images/logos/logo3.png"
+    <a href="/" class="logo" aria-label="Toekoms Digital Home">
+      <img
+        src="/assets/images/logos/logo4.jfif"
         alt="Toekoms Digital Logo"
         class="logo-image"
       />
@@ -11,16 +11,19 @@
       class="menu-toggle"
       id="menuToggle"
       type="button"
-      aria-label="Open navigation"
+      aria-label="Toggle navigation"
       aria-expanded="false"
     >
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
     </button>
     <ul class="nav-links" id="navLinks">
       <li class="nav-dropdown">
-        <a href="/about">About</a>
+        <a href="/about" class="nav-link-parent">
+          <span>About</span>
+          <span class="mobile-expand-icon" aria-hidden="true">+</span>
+        </a>
         <ul class="dropdown-menu">
           <li><a href="/about">Overview</a></li>
           <li><a href="/about#capabilities">Capabilities</a></li>
@@ -31,7 +34,10 @@
         </ul>
       </li>
       <li><a href="/contact">Contact</a></li>
+      <li class="nav-mobile-cta">
+        <a href="/contact" class="mobile-cta-btn">Schedule Consultation</a>
+      </li>
     </ul>
-    <a href="/contact" class="nav-cta">Get started</a>
+    <a href="/contact" class="nav-cta">Schedule Consultation</a>
   </div>
 </nav>

@@ -374,6 +374,73 @@
   color: var(--color-brand-blue);
 }
 
+.phone-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.country-code-select {
+  max-width: 145px;
+  flex-shrink: 0;
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: rgba(11, 18, 32, 0.9) !important;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.country-code-select option {
+  background: #0b1220;
+  color: #ffffff;
+}
+
+.resume-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: rgba(4, 18, 38, 0.4);
+  color: white;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color var(--transition);
+}
+
+.resume-form textarea:focus {
+  outline: none;
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
+}
+
+.resume-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: #2dd4bf;
+  color: #0b1220;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.primary-btn:hover {
+  background: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.25);
+}
+
 @media (max-width: 680px) {
   .resume-upload-section {
     padding: 24px;
@@ -381,5 +448,9 @@
 
   .resume-form-row {
     grid-template-columns: 1fr;
+  }
+
+  .primary-btn {
+    width: 100%;
   }
 }
